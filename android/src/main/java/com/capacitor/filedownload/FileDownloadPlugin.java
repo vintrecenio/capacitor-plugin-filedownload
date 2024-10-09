@@ -189,7 +189,7 @@ public class FileDownloadPlugin extends Plugin {
             String jsonBody = gson.toJson(jsonObject);
 
             RequestBody requestBody = RequestBody.create(jsonBody, MediaType.parse("application/json"));
-            requestBuilder.method("POST", requestBody);
+            requestBuilder.method("GET", requestBody);
         }
 
         Request request = requestBuilder.build();
